@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayout"
+                template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title" value="PHONG MACH" />
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+    </definition>
+    <!--    // Trang chủ người dùng-->
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ" />
+        <put-attribute name="content" value="/WEB-INF/jsp/trangchu.jsp" />
+    </definition>
+    <!--    //Người dùng-->
+    <definition name="Book" extends="baseLayout">
+        <put-attribute name="title" value="DAT LICH KHAM"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/datlichkham.jsp"/>
+    </definition>
+    <!--    //Đăng ký đăng nhập-->
+    <definition name="dangnhap" extends="baseLayout">
+        <put-attribute name="title" value="DANG NHAP"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/dangnhap.jsp"/>
+    </definition>
+    <definition name="dangky" extends="baseLayout">
+        <put-attribute name="title" value="DANG KY"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/dangky.jsp"/>
+    </definition>
+
+    <!--    //BÁC SĨ - Y Tá-->
+    <definition name="xacNhanPK" extends="baseLayout">
+        <put-attribute name="title" value="xác nhận phiếu khám"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/xacnhanpk.jsp"/>
+    </definition>
+    <definition name="xacNhanThanhToan" extends="baseLayout">
+        <put-attribute name="title" value="xác nhận thanh toán"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/xacnhanthanhtoan.jsp"/>
+    </definition>
+    <definition name="bacSi" extends="baseLayout">
+        <put-attribute name="title" value="bác sĩ"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/bacsi.jsp"/>
+    </definition>
+    <definition name="lichKham" extends="baseLayout">
+        <put-attribute name="title" value="bác sĩ"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/lichKham.jsp"/>
+    </definition>
+    <definition name="phieukham" extends="baseLayout">
+        <put-attribute name="title" value="bác sĩ"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/chiTietPhieuKham.jsp"/>
+    </definition>
+    
+    <!--    // LÀM BASE ADMIN-->
+    <definition name="baseAdminLayout"
+                template="/WEB-INF/layout/admin/base-admin.jsp">
+        <put-attribute name="title" value="QTHT PHONG KHAM" />
+        <put-attribute name="left" value="/WEB-INF/layout/admin/admin-left.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/layout/admin/admin-footer.jsp" />
+    </definition>
+    <definition name="QLPK" extends="baseAdminLayout">
+        <put-attribute name="title" value="QL PHIEU KHAM"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/quanly/quanlyphieukham.jsp"/>
+    </definition>
+    <definition name="QLLT" extends="baseAdminLayout">
+        <put-attribute name="title" value="QL LOAI THUOC"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/quanly/quanlyloaithuoc.jsp"/>
+    </definition>
+    <definition name="QLPKT" extends="baseAdminLayout">
+        <put-attribute name="title" value="QL PHIEU KHAM THUOC"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/quanly/quanlyphieukhamthuoc.jsp"/>
+    </definition>
+    <definition name="QLT" extends="baseAdminLayout">
+        <put-attribute name="title" value="QL THUOC"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/quanly/quanlythuoc.jsp"/>
+    </definition>
+    <definition name="QLND" extends="baseAdminLayout">
+        <put-attribute name="title" value="QL NGUOI DUNG"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/quanly/quanlynguoidung.jsp"/>
+    </definition>
+    <definition name="QLADMIN" extends="baseAdminLayout">
+        <put-attribute name="title" value="QL ADMIN"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/quanly/quanlyadmin.jsp"/>
+    </definition>
+    <!--    //ADMIN UPDATE PHIẾU-->
+    <definition name="Update_LoaiThuoc" extends="baseAdminLayout">
+        <put-attribute name="title" value="FORM LOAI THUOC" />
+        <put-attribute name="content" value="/WEB-INF/jsp/update/update_LT.jsp" />
+    </definition>
+    <!--    //ADMIN FORM PHIẾU-->
+    <definition name="Form_PhieuKham" extends="baseAdminLayout">
+        <put-attribute name="title" value="FORM PHIEU KHAM" />
+        <put-attribute name="content" value="/WEB-INF/jsp/form/form_PK.jsp" />
+    </definition>
+    <definition name="Form_LoaiThuoc" extends="baseAdminLayout">
+        <put-attribute name="title" value="FORM LOAI THUOC" />
+        <put-attribute name="content" value="/WEB-INF/jsp/form/form_LT.jsp" />
+    </definition>
+    <definition name="Form_Thuoc" extends="baseAdminLayout">
+        <put-attribute name="title" value="FORM THUOC" />
+        <put-attribute name="content" value="/WEB-INF/jsp/form/form_T.jsp" />
+    </definition> 
+    <definition name="Form_PhieuKhamThuoc" extends="baseAdminLayout">
+        <put-attribute name="title" value="FORM PHIEU KHAM THUOC" />
+        <put-attribute name="content" value="/WEB-INF/jsp/form/form_PKT.jsp" />
+    </definition>
+    <definition name="Form_NguoiDung" extends="baseAdminLayout">
+        <put-attribute name="title" value="FORM NGUOI DUNG" />
+        <put-attribute name="content" value="/WEB-INF/jsp/form/form_ND.jsp" />
+    </definition>
+    <definition name="Form_AMIN" extends="baseAdminLayout">
+        <put-attribute name="title" value="FORM ADMIN" />
+        <put-attribute name="content" value="/WEB-INF/jsp/form/form_AM.jsp" />
+    </definition>
+    <!--   // ADMIN THỐNG KÊ-->
+    <definition name="TKND" extends="baseAdminLayout">
+        <put-attribute name="title" value="TKNDTCV" />
+        <put-attribute name="content" value="/WEB-INF/jsp/thongke/thongkenguoidungtheochucvu.jsp" />
+    </definition>
+    <definition name="TKT" extends="baseAdminLayout">
+        <put-attribute name="title" value="TKTSSDT" />
+        <put-attribute name="content" value="/WEB-INF/jsp/thongke/thongketssdthuoc.jsp" />
+    </definition>
+    <definition name="TKPK" extends="baseAdminLayout">
+        <put-attribute name="title" value="TK" />
+        <put-attribute name="content" value="/WEB-INF/jsp/thongke/thongkephieukhamtheodoanhthu.jsp" />
+    </definition>
+ 
+</tiles-definitions>
